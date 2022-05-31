@@ -1,1 +1,0 @@
-alert("Los datos han sido ingresados correctamente.")
