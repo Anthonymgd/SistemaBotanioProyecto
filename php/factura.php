@@ -15,7 +15,6 @@
         <a href="payment.php"><div>Método de Pago</div></a>
         <a href="../about.html"><div>About us</div></a>
     </nav>
-
     <main>
         <?php
         $equipo = $_POST['txtEquipo'];

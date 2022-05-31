@@ -12,7 +12,6 @@ if (!$conn) {
 echo "Conexión Exitosa";
 echo "<br>";
 
-
 $equipo = $_POST['txtEquipo'];
 $precio = $_POST['txtPrecio'];
 $almacenamiento = $_POST['txtAlmacenamiento'];

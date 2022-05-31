@@ -45,4 +45,3 @@ function cargarXML(xml) {
   }
   document.getElementById("items").innerHTML = form;
 }
-  
