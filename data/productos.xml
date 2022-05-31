@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <CATALOGO>
+     <products>
+         <productName>Toshiba</productName>
+         <precio>300.99$</precio>
+         <almacenamiento>1TB</almacenamiento>
+         <procesador>i5 Core U5200</procesador>
+         <RAM>6GB</RAM>
+     </products>
+     <products>
+         <productName>Lenovo</productName>
+         <precio>560.99$</precio>
+         <almacenamiento>1TB</almacenamiento>
+         <procesador>i7 Core</procesador>
+         <RAM>8GB</RAM>
+     </products>
+     <products>
+         <productName>Dell</productName>
+         <precio>990.99$</precio>
+         <almacenamiento>2TB</almacenamiento>
+         <procesador>i9 Core </procesador>
+         <RAM>8GB</RAM>
+     </products>
+     <products>
+         <productName>Acer</productName>
+         <precio>700.99$</precio>
+         <almacenamiento>2TB</almacenamiento>
+         <procesador>i5 Core U5200</procesador>
+         <RAM>6GB</RAM>
+     </products>
+ </CATALOGO>

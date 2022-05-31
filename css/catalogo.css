@@ -1,0 +1,42 @@
+form {
+    color: white;
+    background-color: #222;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    margin: 50px 0 auto;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+label, input {
+    margin: 4px 0;
+    text-align: center;
+}
+
+form fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.formFactura {
+    display: flex;
+    flex-direction: row;
+    width: auto !important;
+    height: auto !important;
+}
+
+
+img {
+  width: 150px;
+}
