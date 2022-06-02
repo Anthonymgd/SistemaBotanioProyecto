@@ -1,4 +1,4 @@
 <?php
-$conexion=mysqli_connect("localhost","","","sistemabotanico");
+$conexion=mysqli_connect("localhost","root","","sistemabotanico");
 ?>
 <H1>Conexión exitosa</H1>
