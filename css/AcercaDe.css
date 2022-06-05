@@ -59,6 +59,7 @@ html {
 html::-webkit-scrollbar {
     width: .8rem;
 }
+
 /*Fondo*/
 body {
     background: var(--bg);
@@ -228,6 +229,7 @@ section {
     padding: 2rem 0;
     gap: 1rem;
 }
+
 .footer .credit {
     font-size: 2rem;
     color: rgb(0, 0, 0);
@@ -241,13 +243,14 @@ section {
     color: rgb(0, 0, 0);
     border: var(--border);
     font-size: 2rem;
-    
+
 }
 
 .footer .links a:hover {
     background: var(--main-color);
 }
 
+/*Doble color */
 .footer .credit span {
     color: var(--main-color);
 }
