@@ -155,22 +155,13 @@ section {
     padding: 2rem;
 }
 
-.products .box-container .box .image {
-    padding: 2.5rem 0;
-}
 
-.products .box-container .box .image img {
-    height: 25rem;
-}
 
 .products .box-container .box .content h3 {
     color: rgb(0, 0, 0);
     font-size: 2.5rem;
 }
 
-.products .box-container .box .content .stars {
-    padding: 1.5rem;
-}
 
 .products .box-container .box .content .stars i {
     font-size: 1.7rem;
@@ -223,60 +214,6 @@ section {
 .review .box-container .box .stars i {
     font-size: 1.5rem;
     color: var(--main-color);
-}
-
-.blogs .box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 1.5rem;
-}
-
-.blogs .box-container .box {
-    border: var(--border);
-}
-
-.blogs .box-container .box .image {
-    height: 25rem;
-    overflow: hidden;
-    width: 100%;
-}
-
-.blogs .box-container .box .image img {
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
-}
-
-.blogs .box-container .box:hover .image img {
-    transform: scale(1.2);
-}
-
-.blogs .box-container .box .content {
-    padding: 2rem;
-}
-
-.blogs .box-container .box .content .title {
-    font-size: 2.5rem;
-    line-height: 1.5;
-    color: rgb(0, 0, 0);
-}
-
-.blogs .box-container .box .content .title:hover {
-    color: var(--main-color);
-}
-
-.blogs .box-container .box .content span {
-    color: var(--main-color);
-    display: block;
-    padding-top: 1rem;
-    font-size: 2rem;
-}
-
-.blogs .box-container .box .content p {
-    font-size: 1.6rem;
-    line-height: 1.8;
-    color: rgb(0, 0, 0);
-    padding: 1rem 0;
 }
 
 .footer {
