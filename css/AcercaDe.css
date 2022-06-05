@@ -1,10 +1,37 @@
+body {
+    width: 100%;
+    background-image: url("../imagenes/background.jpg");
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+@keyframes back {
+    100% {
+        background-position: 2000px 0;
+    }
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
 :root {
     --main-color: #d3ad7f;
-    --black: #13131a;
-    --bg: #010103;
-    --border: .1rem solid rgba(255, 255, 255, .3);
+    --black: #ffffff;
+    --bg: #ffffff;
+    --border: .1rem solid rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -30,15 +57,6 @@ html::-webkit-scrollbar {
     width: .8rem;
 }
 
-html::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-html::-webkit-scrollbar-thumb {
-    background: #fff;
-    border-radius: 5rem;
-}
-
 body {
     background: var(--bg);
 }
@@ -52,7 +70,7 @@ section {
     display: inline-block;
     padding: .9rem 3rem;
     font-size: 1.7rem;
-    color: #fff;
+    color: rgb(0, 0, 0);
     background: var(--main-color);
     cursor: pointer;
 }
@@ -85,22 +103,14 @@ section {
     font-weight: lighter;
     line-height: 1.8;
     padding: 1rem 0;
-    color: #eee;
+    color: rgb(8, 8, 8);
 }
 
 .about .row {
     display: flex;
     align-items: center;
-    background: var(--black);
+
     flex-wrap: wrap;
-}
-
-.about .row .image {
-    flex: 1 1 45rem;
-}
-
-.about .row .image img {
-    width: 100%;
 }
 
 .about .row .content {
@@ -110,17 +120,28 @@ section {
 
 .about .row .content h3 {
     font-size: 3rem;
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 
 .about .row .content p {
     font-size: 1.6rem;
-    color: #ccc;
+    color: rgb(0, 0, 0);
     padding: 1rem 0;
     line-height: 1.8;
 }
 
+.heading {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
 
+.heading span {
+    color: var(--main-color);
+    text-transform: uppercase;
+}
 
 .products .box-container {
     display: grid;
@@ -134,20 +155,6 @@ section {
     padding: 2rem;
 }
 
-.products .box-container .box .icons a {
-    height: 5rem;
-    width: 5rem;
-    line-height: 5rem;
-    font-size: 2rem;
-    border: var(--border);
-    color: #fff;
-    margin: .3rem;
-}
-
-.products .box-container .box .icons a:hover {
-    background: var(--main-color);
-}
-
 .products .box-container .box .image {
     padding: 2.5rem 0;
 }
@@ -157,7 +164,7 @@ section {
 }
 
 .products .box-container .box .content h3 {
-    color: #fff;
+    color: rgb(0, 0, 0);
     font-size: 2.5rem;
 }
 
@@ -171,7 +178,7 @@ section {
 }
 
 .products .box-container .box .content .price {
-    color: #fff;
+    color: rgb(0, 0, 0);
     font-size: 2.5rem;
 }
 
@@ -196,7 +203,7 @@ section {
 .review .box-container .box p {
     font-size: 1.5rem;
     line-height: 1.8;
-    color: #ccc;
+    color: rgb(0, 0, 0);
     padding: 2rem 0;
 }
 
@@ -210,61 +217,12 @@ section {
 .review .box-container .box h3 {
     padding: 1rem 0;
     font-size: 2rem;
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 
 .review .box-container .box .stars i {
     font-size: 1.5rem;
     color: var(--main-color);
-}
-
-.contact .row {
-    display: flex;
-    background: var(--black);
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.contact .row .map {
-    flex: 1 1 45rem;
-    width: 100%;
-    object-fit: cover;
-}
-
-.contact .row form {
-    flex: 1 1 45rem;
-    padding: 5rem 2rem;
-    text-align: center;
-}
-
-.contact .row form h3 {
-    text-transform: uppercase;
-    font-size: 3.5rem;
-    color: #fff;
-}
-
-.contact .row form .inputBox {
-    display: flex;
-    align-items: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    background: var(--bg);
-    border: var(--border);
-}
-
-.contact .row form .inputBox span {
-    color: #fff;
-    font-size: 2rem;
-    padding-left: 2rem;
-}
-
-.contact .row form .inputBox input {
-    width: 100%;
-    padding: 2rem;
-    font-size: 1.7rem;
-    color: #fff;
-    text-transform: none;
-    background: none;
 }
 
 .blogs .box-container {
@@ -300,7 +258,7 @@ section {
 .blogs .box-container .box .content .title {
     font-size: 2.5rem;
     line-height: 1.5;
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 
 .blogs .box-container .box .content .title:hover {
@@ -317,32 +275,13 @@ section {
 .blogs .box-container .box .content p {
     font-size: 1.6rem;
     line-height: 1.8;
-    color: #ccc;
+    color: rgb(0, 0, 0);
     padding: 1rem 0;
 }
 
 .footer {
     background: var(--black);
     text-align: center;
-}
-
-.footer .share {
-    padding: 1rem 0;
-}
-
-.footer .share a {
-    height: 5rem;
-    width: 5rem;
-    line-height: 5rem;
-    font-size: 2rem;
-    color: #fff;
-    border: var(--border);
-    margin: .3rem;
-    border-radius: 50%;
-}
-
-.footer .share a:hover {
-    background-color: var(--main-color);
 }
 
 .footer .links {
@@ -355,7 +294,7 @@ section {
 
 .footer .links a {
     padding: .7rem 2rem;
-    color: #fff;
+    color: rgb(0, 0, 0);
     border: var(--border);
     font-size: 2rem;
 }
@@ -366,7 +305,7 @@ section {
 
 .footer .credit {
     font-size: 2rem;
-    color: #fff;
+    color: rgb(0, 0, 0);
     font-weight: lighter;
     padding: 1.5rem;
 }
@@ -401,12 +340,6 @@ section {
     .header .search-form {
         width: 90%;
         right: 2rem;
-    }
-
-    .home {
-        background-position: left;
-        justify-content: center;
-        text-align: center;
     }
 
     .home .content h3 {
