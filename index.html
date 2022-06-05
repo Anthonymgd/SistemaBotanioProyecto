@@ -7,6 +7,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/formulario_contacto.css">
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -35,23 +36,24 @@
         </a>
     </main>
     <br>
-    <div class="container">
-        <form>
-            <label for="nombre">Nombre:</label>
-            <input id="nombre" name="nombre" placeholder="Nombre completo">
-            <label for="email">Email:</label>
-            <input id="email" name="email" type="email" placeholder="ejemplo@email.com">
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" placeholder="Danos tu mensaje"></textarea>
-            <input id="submit" name="submit" type="submit" value="Enviar">
+    <div class="contenedor">
+        <div class="info-form">
+            <h2>Comunícate con nosotros</h2>
+            <p>Bótanica ESPE 2022</p>
+             <!--Iconos -->
+            <a href="#"><i class="fa fa-phone"></i> 0912345284</a>
+            <a href="#"><i class="fa fa-envelope"></i> botanica@espe.edu.ec</a>
+            <a href="#"><i class="fa fa-map-marked"></i> Santo Domingo, Ecuador</a>
+        </div>
+        <form action="#" autocomplete="off">
+            <input type="text" name="nombre" placeholder="Escriba su nombre" class="campo">
+            <input type="emal" name="email" placeholder="Escriba su email" class="campo">
+            <textarea name="mensaje" placeholder="Deja un mensaje"></textarea>
+            <input type="submit" name="enviar" value="Enviar Mensaje" class="btn-enviar">
         </form>
     </div>
 
 
-
-    <footer>
-        <span>Venta de Plantas 2022</span>
-    </footer>
 </body>
 
 </html>
