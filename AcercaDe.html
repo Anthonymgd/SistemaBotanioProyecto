@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +9,24 @@
     <script src="js/template.js"></script>
 
 </head>
+
 <body>
     <nav>
-        <a href="#"><div>Home Page</div></a>
-        <a href="#"><div>Catálogo</div></a>
-        <a href="#"><div>Facturación</div></a>
-        <a href="#"><div>Método de Pago</div></a>
-        <a href="#"><div>About us</div></a>
+        <a href="#">
+            <div>Home Page</div>
+        </a>
+        <a href="#">
+            <div>Catálogo</div>
+        </a>
+        <a href="#">
+            <div>Facturación</div>
+        </a>
+        <a href="#">
+            <div>Método de Pago</div>
+        </a>
+        <a href="#">
+            <div>About us</div>
+        </a>
     </nav>
     <header class="header">
 
@@ -51,64 +63,131 @@
 
         </div>
 
-    </section>
 
-    <section class="products" id="products">
-
-        <h1 class="heading"> Productos <span>Estrellas</span> </h1>
-
-        <div class="box-container">
-
-            <div class="box">
-                <div class="image">
-                    <img src="imagenes/Producto1.jpg" style="
-                    width: 200px;">
-                </div>
-                <div class="content">
-                    <h3>Oregano </h3>
-
-                    <div class="price">$5.99 <span>$8.99</span></div>
-                    <a href="#" class="btn">Visitar tienda</a>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="icons">
-                    <a href="#" class="fas fa-shopping-cart"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="imagenes/Producto2.jpg" style="
-                    width: 200px;">
-                </div>
-                <div class="content">
-                    <h3>Girasoles</h3>
-                    <div class="price">$3.99 <span>$5.99</span></div>
-                    <a href="#" class="btn">Visitar tienda</a>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="icons">
-                    <a href="#" class="fas fa-shopping-cart"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="imagenes/Producto3.jpg" style="
-                    width: 200px;">
-                </div>
-                <div class="content">
-                    <h3>Sabila</h3>
-                    <div class="price">$8.99 <span>$10.99</span></div>
-                    <a href="#" class="btn">Visitar tienda</a>
-                </div>
-            </div>
-        </div>
 
     </section>
+    <template id='Estrella'>
+        <section class="products" id="products">
 
+            <h1 class="heading"> Productos <span>Estrellas</span> </h1>
+
+            <div class="box-container">
+
+                <div class="box">
+                    <div class="image">
+                        <img src="imagenes/Producto1.jpg" style="
+                    width: 200px;">
+                    </div>
+                    <div class="content">
+                        <h3>Oregano </h3>
+
+                        <div class="price">$5.99 <span>$8.99</span></div>
+                        <a href="#" class="btn">Visitar tienda</a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="imagenes/Producto2.jpg" style="
+                    width: 200px;">
+                    </div>
+                    <div class="content">
+                        <h3>Girasoles</h3>
+                        <div class="price">$3.99 <span>$5.99</span></div>
+                        <a href="#" class="btn">Visitar tienda</a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="imagenes/Producto3.jpg" style="
+                    width: 200px;">
+                    </div>
+                    <div class="content">
+                        <h3>Sabila</h3>
+                        <div class="price">$8.99 <span>$10.99</span></div>
+                        <a href="#" class="btn">Visitar tienda</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <style>
+            /*Estilo para productos estrellas*/
+            .products .box-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+                gap: 1.5rem;
+            }
+
+            .products .box-container .box {
+                text-align: center;
+                border: var(--border);
+                padding: 2rem;
+            }
+
+            .products .box-container .box .content h3 {
+                color: rgb(0, 0, 0);
+                font-size: 2.5rem;
+            }
+
+            /*Color para el precio*/
+            .products .box-container .box .content .price {
+                color: rgb(0, 0, 0);
+                font-size: 2.5rem;
+            }
+
+            /*Rayamos el precio */
+            .products .box-container .box .content .price span {
+                text-decoration: line-through;
+                font-weight: lighter;
+                font-size: 1.5rem;
+            }
+
+            .heading {
+                text-align: center;
+                color: rgb(0, 0, 0);
+                text-transform: uppercase;
+                padding-bottom: 3.5rem;
+                font-size: 4rem;
+            }
+
+            .heading span {
+                color: var(--main-color);
+                text-transform: uppercase;
+            }
+
+            .btn {
+                margin-top: 1rem;
+                display: inline-block;
+                padding: .9rem 3rem;
+                font-size: 1.7rem;
+                color: rgb(0, 0, 0);
+                background: var(--main-color);
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            .btn:hover {
+                letter-spacing: .2rem;
+            }
+        </style>
+    </template>
+    <boton-venta>
+
+    </boton-venta>
+
+    <!--Parte de productos estrella-->
     <section class="review" id="review">
 
         <h1 class="heading"> Nuestros <span>Clientes</span> </h1>
@@ -146,6 +225,8 @@
 
     </section>
 
+    <!--FIN-->
+
     <section class="footer">
         <div class="links">
             <a href="#">home</a>
@@ -162,4 +243,5 @@
     </section>
 
 </body>
+
 </html>
