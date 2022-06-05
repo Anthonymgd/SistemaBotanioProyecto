@@ -10,4 +10,4 @@ class Estrella  extends HTMLElement {
       shadowRoot.appendChild(instancia); //Nodo raiz le añade un hijo (template añade a la instancia)
      }
     }
-  window.customElements.define('boton-venta', Estrella );
+  window.customElements.define('producto-estrella', Estrella );
