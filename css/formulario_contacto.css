@@ -7,7 +7,8 @@
 }
 .contenedor{
     width: 100%;
-    max-width: 1100px;
+    max-width: 1205px;
+    background-color: wheat;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -15,13 +16,15 @@
     margin-top: 90px;
 }
 .contenedor h2{
-    margin-bottom: 15px;
-    font-size: 35px
+    margin-bottom: 30px;
+    font-size: 35px;
+    padding-left: 25px;
 }
 .contenedor p{
     font-size: 17px;
     line-height: 1.6;
     margin-bottom: 30px;
+    padding-left: 25px;
 }
 .contenedor a{
     font-size: 17px;
@@ -35,17 +38,19 @@
 .contenedor a i{
     color: green;
     margin-right: 10px;
+    padding-left: 25px;
 }
 .contenedor form .campo, textarea{
-    width: 100%;
+    width: 90%;
     padding: 15px 10px;
     font-size: 16px;
     border: 1px solid burlywood;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     border-radius: 3px;
     outline: 0px;
 }
 .contenedor form textarea{
+  
     max-width: 530px;
     min-width: 530px;
     min-height: 140px;
