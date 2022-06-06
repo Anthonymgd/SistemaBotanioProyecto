@@ -64,5 +64,28 @@ class Imagen extends HTMLElement {
     }
 }
 
+class Separador extends HTMLElement {
+
+    constructor() {
+        super();
+    }
+
+    connectedCallback() {
+        this.innerHTML = `
+            <style>
+                hr {
+                    border-width: 4px;
+                    border-style: dotted;
+                    border-color: #32a361;
+                    width: 80%;
+                }
+
+            </style>
+
+            <hr>
+            `
+    }
+}
 window.customElements.define('texto-animado', Texto);
 window.customElements.define('imagen-centro', Imagen);
+window.customElements.define('hr-separador', Separador);
