@@ -30,10 +30,10 @@ nav {
 
 /*Damos un estilo para luego llamarlo*/
 :root {
-    --main-color: #d3ad7f;
-    --black: #ffffff;
-    --bg: #ffffff;
-    --border: .1rem solid rgba(0, 0, 0, 0.3);
+    --main-color: #91ec8f;
+    --white: #e9dede;
+    --black: #1c1b1b;
+    --border: .1rem solid rgba(17, 87, 9, 0.3);
 }
 
 * {
@@ -62,7 +62,7 @@ html::-webkit-scrollbar {
 
 /*Fondo*/
 body {
-    background: var(--bg);
+    background: var(--while);
 }
 
 section {
@@ -88,7 +88,7 @@ section {
 .home .content h3 {
     font-size: 6rem;
     text-transform: uppercase;
-    color: rgb(19, 18, 18);
+    color: black;
 }
 
 .home .content p {
@@ -96,7 +96,7 @@ section {
     font-weight: lighter;
     line-height: 1.8;
     padding: 1rem 0;
-    color: rgb(8, 8, 8);
+    color: black;
 }
 
 /*Texto alado de la portada*/
@@ -114,12 +114,12 @@ section {
 
 .about .row .content h3 {
     font-size: 3rem;
-    color: rgb(0, 0, 0);
+    color: black;
 }
 
 .about .row .content p {
     font-size: 1.6rem;
-    color: rgb(0, 0, 0);
+    color: black;
     padding: 1rem 0;
     line-height: 1.8;
 }
@@ -127,7 +127,7 @@ section {
 /*Estilo para los titulos */
 .heading {
     text-align: center;
-    color: rgb(0, 0, 0);
+    color: black;
     text-transform: uppercase;
     padding-bottom: 3.5rem;
     font-size: 4rem;
@@ -156,7 +156,7 @@ section {
 .review .box-container .box p {
     font-size: 1.5rem;
     line-height: 1.8;
-    color: rgb(0, 0, 0);
+    color: black;
     padding: 2rem 0;
 }
 
@@ -172,13 +172,13 @@ section {
 .review .box-container .box h3 {
     padding: 1rem 0;
     font-size: 2rem;
-    color: rgb(0, 0, 0);
+    color: black;
 }
 
 /* Cierre*/
 
 .footer {
-    background: var(--black);
+    background: var(--while);
     text-align: center;
 }
 
@@ -189,7 +189,7 @@ section {
 
 .footer .credit {
     font-size: 2rem;
-    color: rgb(0, 0, 0);
+    color: black;
     font-weight: lighter;
     padding: 1.5rem;
 }
@@ -197,7 +197,7 @@ section {
 /*Lista deñl footer separa los cuadros*/
 .footer .links a {
     padding: .7rem 2rem;
-    color: rgb(0, 0, 0);
+    color: black;
     border: var(--border);
     font-size: 2rem;
 
@@ -256,4 +256,14 @@ section {
         font-size: 50%;
     }
 
+}
+#botoncargar{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.9rem 3rem;
+    font-size: 1.7rem;
+    color: rgb(0, 0, 0);
+    background: var(--main-color);
+    cursor: pointer;
+    text-decoration: none;
 }
