@@ -17,21 +17,174 @@
         <a href="#">
             <div>Catálogo</div>
         </a>
-        <a href="php/factura.php">
-            <div>Facturación</div>
-        </a>
-        <a href="php/payment.php">
-            <div>Método de Pago</div>
-        </a>
         <a href="about.html">
             <div>About us</div>
         </a>
     </nav>
 
-    <main id="items">
-
+    <template id="shadowTemplate" data-name="photo-card" data-type="shadowDOM">
+        <style>
+          :host {
+            position: relative;
+            display: inline-block;
+            width: 230px;
+            height: 383px;
+            box-sizing: border-box;
+            margin: 10px 20px;
+      
+            box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .5);
+            
+            overflow: hidden;
+          }
+         
+          ::slotted([slot="image"]) {
+            position: absolute;
+            top: -30%;
+            left: -30%;
+            max-width: 160%;
+            height: auto;
+            
+            transition: all .25s ease-in-out;
+          }
+          
+          :host(:hover) ::slotted([slot="image"]) {
+            transform: scale(.90);
+          }
+          
+          .overlay {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            
+            background: rgba(0, 0, 0, .6);
+            color: #fff;
+            
+            transition: bottom .25s ease-in;
+              
+            overflow: hidden;
+          }
+          
+          :host(:hover) .overlay {
+            bottom: 0;
+          }
+          
+          .overlay__title {
+            padding: 30px 0;
+            
+            text-align: center;
+            font-family: 'Righteous', cursive;
+            font-size: 30px;
+          }
+          
+          .overlay__description {
+            padding: 0 10px 30px 10px;
+            min-height: 9em;
+            
+            font-size: 18px;
+            font-family: 'Comfortaa', cursive;
+            text-align: center;
+            line-height: 1.4em;
+          }
+          
+          .overlay__button {
+            display: block;
+            width: 60%;
+            margin: 0 auto;
+            box-sizing: border-box;
+            padding: 16px;
+            
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            letter-spacing: 1px;
+            font-weight: bold;
+            background: #222;
+            
+            transition: background .25s ease-out;
+            
+            cursor: pointer;
+          }
+          
+          .overlay__button:hover {
+            background: #333;
+          }
+          
+          ::slotted([slot="button"]),
+          ::slotted([slot="button"]:link),
+          ::slotted([slot="button"]:visited),
+          ::slotted([slot="button"]:hover) {
+            color: #fff;
+            text-decoration: none;
+          }
+        </style>
+        
+        <div class="img">
+          <slot name="image"></slot>
+        </div>
+        
+        <div class="overlay">
+          <div class="overlay__title">
+            <slot name="header"></slot>
+          </div>
+          
+          <div class="overlay__description">
+            <slot name="description"></slot>
+          </div>
+          
+          <div class="overlay__button">
+            <slot name="button"></slot>
+          </div>
+        </div>
+        
+      </template>
+      
+      <script>
+      var allShadows = [...document.querySelectorAll('template[data-type="shadowDOM"]')];
+      allShadows.forEach((item) => {
+        customElements.define(item.dataset.name, class extends HTMLElement {
+          connectedCallback() {
+            this.attachShadow({mode: 'open'});
+            this.shadowRoot.append(item.content.cloneNode(true));
+          }
+        });
+      });
+      </script>
+      
+      <photo-card>
+        <img slot="image"
+             src="https://images.unsplash.com/photo-1636920170547-230f614781b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzODUyMDM3MA&ixlib=rb-1.2.1&q=80&w=400"
+             width="400"
+             height="600"
+             alt="" />
+        <span slot="header">A road</span>
+        <span slot="description">A road is a wide way leading from one place to another, typically one with a usally prepared surface which vehicles and bikes can use.</span>
+        <a href="#" slot="button">Read more...</a>
+      </photo-card>
+      
+      <photo-card>
+        <img slot="image"
+             src="https://images.unsplash.com/photo-1637548090037-b0c8d9f9d078?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzODUyMDM3MA&ixlib=rb-1.2.1&q=80&w=400"
+             width="400"
+             height="600"
+             alt="" />
+        <span slot="header">A door</span>
+        <span slot="description">A door is a hinged or otherwise movable barrier that allows ingress into and egress from an enclosure.</span>
+        <a href="#" slot="button">Read more...</a>
+      </photo-card>
+      
+      <photo-card>
+        <img slot="image"
+             src="https://images.unsplash.com/photo-1637822412463-65d4af2c910c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzODUyNjk5OA&ixlib=rb-1.2.1&q=80&w=400"
+             width="400"
+             height="600"
+             alt="" />
+        <span slot="header">A waterfall</span>
+        <span slot="description">A waterfall is a point in a river or stream where water flows over a vertical drop or a series of steep drops.</span>
+        <a href="#" slot="button">Read more...</a>
+      </photo-card>      
     </main>
     
 </body>
-<script src="js/cargarCatalogo.js"></script>
 </html>

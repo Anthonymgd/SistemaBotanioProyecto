@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  background: #E8EAF6;
+}
