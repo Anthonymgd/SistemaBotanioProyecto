@@ -7,15 +7,13 @@ class Texto extends HTMLElement {
         this.innerHTML = `
         <style>
             h1{
-                font-weight: 400px;
+                font-weight: 300px;
                 text-align: center;
-                font-size: 120px;
+                font-size: 90px;
                 line-height: 160px;
                 margin-left: -10px;
-                color: transparent;
-                -webkit-text-stroke: 1px #fff;
-                background: url(../images/back.png);
-                -webkit-background-clip: text;
+                color: rgb(0, 0, 0);
+                font-family: 'Work Sans', sans-serif;
                 animation: back 20s linear infinite;
             }
             @keyframes back {
@@ -26,11 +24,45 @@ class Texto extends HTMLElement {
         </style>
 
       
-        <h1>Botánica</h1>
+        <h1>¿Quienes Somos?</h1>
        
         
         `
     }
 
 }
+
+class Imagen extends HTMLElement {
+
+    constructor() {
+        super();
+    }
+
+    connectedCallback() {
+        this.innerHTML = `
+        
+        <style>
+            .contenedor1{
+                background-color: white;
+                width: 30%;
+                height: 50%;
+                align-items: center;
+                padding: 10px;
+                border-radius: 10px;
+            }
+            .imagen{
+                width: 300px;
+                height: 280px;
+            }
+        </style>
+
+        <div class="contenedor1">
+            <img class="imagen" src="../images/plantas.png">
+        </div>
+
+        `
+    }
+}
+
 window.customElements.define('texto-animado', Texto);
+window.customElements.define('imagen-centro', Imagen);
