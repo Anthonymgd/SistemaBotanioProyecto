@@ -1,27 +1,9 @@
-body {
-  font-family: sans-serif;
+
+body .contenedor-card{
+  background-color: white;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  
-  background: #E8EAF6;
-}
-
-/* Modal */
-.modal {
-  color: blue;  
-  background-color: rgba(153, 51, 51,0.4);
-}
-.modal-content {
-  color: blue;
-  background-color: red;
-}
-
-pp-modal {
-  background-color: red;
-}
-
-pp-modal .modal-content {
-  color: blue;
-  background-color: red;
+  max-width: 800px;
+  justify-content: space-between;
+  margin: 50px auto;
 }

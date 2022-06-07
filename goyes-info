@@ -12,8 +12,8 @@ const htmlTemplate = `
                 display: none; 
                 position: fixed; 
                 z-index: 1; 
-                padding-top: 40vh;
-                padding-left: 8vw;  
+                padding-top: 35vh;
+                padding-left: 7vw;  
                 left: 0;
                 top: 0;
                 width: 100%; 
@@ -30,22 +30,27 @@ const htmlTemplate = `
                 padding: 0;
                 border: 1px solid #888;
                 width: 80%;
+                font-size: 1.5em;
                 box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
                 -webkit-animation-name: animatetop;
                 -webkit-animation-duration: 0.4s;
                 animation-name: animatetop;
-                animation-duration: 0.4s
+                animation-duration: 0.4s;
+                margin: 0 0 50px 0;
+            }
+            .space {
+                heigth: 50px;
             }
 
             /* Add Animation */
             @-webkit-keyframes animatetop {
                 from {top:0; opacity:0} 
-                to {top:40vh; opacity:1}
+                to {top:35vh; opacity:1}
             }
 
             @keyframes animatetop {
                 from {top:0; opacity:0}
-                to {top:40vh; opacity:1}
+                to {top:35vh; opacity:1}
             }
 
             /* The Close Button */
@@ -73,8 +78,7 @@ const htmlTemplate = `
             .modal-body {padding: 2px 16px; margin: 20px 2px}
 
         </style>
-
-        <button modal-trigger>Open Modal</button>
+        <goyes-boton modal-trigger text='+'></goyes-boton>
 
         <div class="modal">
             <div class="modal-content">
@@ -83,7 +87,7 @@ const htmlTemplate = `
                     <slot name="header"><h1>Default text</h1></slot>
                 </div>
                 <div class="modal-body">
-                    <slot name="text"><p>Default content</p><slot>
+                    <slot name="text"><p></p><slot>
                 </div>
             </div>
         </div>
@@ -126,7 +130,7 @@ class Modal extends HTMLElement {
     */
   disconnectedCallback() {
     this.shadowRoot
-      .querySelector("button")
+      .querySelector("goyes-boton")
       .removeEventListener("click", this._showModal);
     this.shadowRoot
       .querySelector(".close")
@@ -217,4 +221,4 @@ class Modal extends HTMLElement {
   }
   
 }
-customElements.define("pp-modal", Modal);
+customElements.define("goyes-modal", Modal);

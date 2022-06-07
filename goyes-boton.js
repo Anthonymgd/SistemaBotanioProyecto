@@ -38,7 +38,6 @@ class BotonEstandar extends HTMLElement {
                     transition: transform .075s ease-in-out;
                     position: relative;
                     pointer-events: all;
-                    font-family: sans-serif;
                     display: flex;
                     align-items: center;
                     justify-content: center;
