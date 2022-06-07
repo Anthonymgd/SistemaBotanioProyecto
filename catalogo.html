@@ -7,6 +7,9 @@
     <title>Catalogo</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/catalogo.css">
+    <script src="goyes-boton.js"></script>
+    <script src="goyes-info"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 
 <body>
@@ -74,7 +77,6 @@
             padding: 30px 0;
             
             text-align: center;
-            font-family: 'Righteous', cursive;
             font-size: 30px;
           }
           
@@ -83,34 +85,25 @@
             min-height: 9em;
             
             font-size: 18px;
-            font-family: 'Comfortaa', cursive;
             text-align: center;
             line-height: 1.4em;
           }
           
           .overlay__button {
+            color: white;
+            overflow: hidden;
             display: block;
-            width: 60%;
-            margin: 0 auto;
-            box-sizing: border-box;
-            padding: 16px;
-            
+            margin: 2em auto;
             text-align: center;
-            font-family: Arial, Helvetica, sans-serif;
             font-size: 12px;
             letter-spacing: 1px;
             font-weight: bold;
-            background: #222;
             
             transition: background .25s ease-out;
             
             cursor: pointer;
           }
-          
-          .overlay__button:hover {
-            background: #333;
-          }
-          
+
           ::slotted([slot="button"]),
           ::slotted([slot="button"]:link),
           ::slotted([slot="button"]:visited),
@@ -132,14 +125,12 @@
           <div class="overlay__description">
             <slot name="description"></slot>
           </div>
-          
           <div class="overlay__button">
-            <slot name="button"></slot>
+            <slot></slot>
           </div>
         </div>
-        
-      </template>
-      
+
+      </template>                              
       <script>
       var allShadows = [...document.querySelectorAll('template[data-type="shadowDOM"]')];
       allShadows.forEach((item) => {
@@ -151,7 +142,7 @@
         });
       });
       </script>
-      
+
       <photo-card>
         <img slot="image"
              src="https://images.unsplash.com/photo-1636920170547-230f614781b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzODUyMDM3MA&ixlib=rb-1.2.1&q=80&w=400"
@@ -160,9 +151,15 @@
              alt="" />
         <span slot="header">A road</span>
         <span slot="description">A road is a wide way leading from one place to another, typically one with a usally prepared surface which vehicles and bikes can use.</span>
-        <a href="#" slot="button">Read more...</a>
+        <!-- <goyes-boton  modal-trigger text='+'></goyes-boton> -->
+
+<pp-modal>
+    <h1 slot="header">Another Modal</h1>
+    <p>This is the second modal. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+</pp-modal>
+
       </photo-card>
-      
       <photo-card>
         <img slot="image"
              src="https://images.unsplash.com/photo-1637548090037-b0c8d9f9d078?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzODUyMDM3MA&ixlib=rb-1.2.1&q=80&w=400"
@@ -183,6 +180,7 @@
         <span slot="header">A waterfall</span>
         <span slot="description">A waterfall is a point in a river or stream where water flows over a vertical drop or a series of steep drops.</span>
         <a href="#" slot="button">Read more...</a>
+        <!-- <goyes-boton slot="button" class="button"><i class="uil uil-plus-circle"></i></goyes-boton> -->
       </photo-card>      
     </main>
     

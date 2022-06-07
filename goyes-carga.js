@@ -20,22 +20,22 @@ class ProgressBar extends HTMLElement {
 
   createdCallback() {
     // The element was created
-    console.log("element created");
+    console.log("Elemento Creado");
   }
 
   attachedCallback() {
     // the element was inserted into the document
-    console.log("element attached to stage");
+    console.log("Elemento insertado en el documento");
   }
 
   detachedCallback() {
     // The element was removed from the document
-    console.log("element removed from stage");
+    console.log("Elemento eliminado del documento");
   }
 
   attributeChangedCallback(attr, oldVal, newVal) {
     // Attribute was added, removed, or updated
-    console.log("Attribute changed:", attr, oldVal, newVal);
+    console.log("Atributo cambiado:", attr, oldVal, newVal);
 
     // const innerBar = this.shadow.querySelector(".c-progress-bar__inner"); // ShadowDOM
     const innerBar = this.shadowRoot.querySelector(".c-progress-bar__inner");
@@ -80,7 +80,7 @@ class ProgressBar extends HTMLElement {
     funcional.innerHTML = `
     // Interval to Set the Complete Value
     (function () {
-        const progress = document.querySelector('progress-bar');
+        const progress = document.querySelector('goyes-barraprogreso');
         let complete = 0;
 
         const progressInterval = setInterval(() => {
@@ -107,4 +107,4 @@ class ProgressBar extends HTMLElement {
   }
 }
 
-window.customElements.define("progress-bar", ProgressBar);
+window.customElements.define("goyes-barraprogreso", ProgressBar);

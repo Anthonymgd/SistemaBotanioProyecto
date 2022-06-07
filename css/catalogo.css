@@ -1,10 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
-
 body {
+  font-family: sans-serif;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   
   background: #E8EAF6;
+}
+
+/* Modal */
+.modal {
+  color: blue;  
+  background-color: rgba(153, 51, 51,0.4);
+}
+.modal-content {
+  color: blue;
+  background-color: red;
+}
+
+pp-modal {
+  background-color: red;
+}
+
+pp-modal .modal-content {
+  color: blue;
+  background-color: red;
 }
