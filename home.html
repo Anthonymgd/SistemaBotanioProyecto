@@ -5,8 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Sistema Botanico</title>
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/Home.css">
+    <link rel="stylesheet" href="css/formulario_contacto.css">
+      <!-- <script src="js/codigo.js"  ></script> -->
+      <script src="js/modulos.js"  type="module"></script>
+ 
     <script src="js/template.js"></script>
+  
 
 </head>
 
@@ -213,6 +220,59 @@
         </div>
 
     </section>
+    <br>
+    <br>
+    <div class="container grid-sm">
+        <form>
+            <div class="form-group">
+                <button type="button" class=" btn2" id="mostrar1">Contáctenos</button>
+            </div>
+            <div class="form-group"></div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombres </th>
+                        <th>Email</th>
+                        <th>Mensaje</th>
+                    </tr>
+                </thead>
+                <tbody id="filas">
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <div class="modal modal-lg " id="modal-registro">
+        <a href="#close" class="modal-overlay" aria-label="Close"></a>
+        <div class="modal-container">
+            <div class="modal-header">
+                <a href="#" class="btn btn-clear float-right" aria-label="Close" id="cerrar"></a>
+                <h2>Comunícate con nosotros</h2>
+                <p>Bótanica ESPE 2022</p>
+                <a href="#"><i class="fa fa-phone"></i> 0912345284</a>
+            <a href="#"><i class="fa fa-envelope"></i> botanica@espe.edu.ec</a>
+            <a href="#"><i class="fa fa-map-marked"></i> Santo Domingo, Ecuador</a>
+            </div>
+            <div class="modal-body">
+                <form id="Datos1">
+                    <div class="form-group">
+                        <label class="form-label">Nombre</label>
+                        <input type="text" class="form-input" id="nombre1">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="text" class="form-input" id="email1">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Mensaje</label>
+                        <textarea name="mensaje" placeholder="Déjenos un mensaje" id="mensaje1"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn1" id="enviar1">Enviar</button>
+            </div>
+        </div>
+    </div>
 
     <!--FIN-->
     <center>
