@@ -1,0 +1,220 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogo</title>
+  <link rel="stylesheet" href="css/Home.css">
+  <link rel="stylesheet" href="css/catalogo.css">
+  <link rel="stylesheet" href="css/acerca_de.css">
+  <script src="js/goyes-boton.js"></script>
+  <script src="js/goyes-info.js"></script>
+</head>
+
+<body>
+  <nav>
+    <a href="home.html">
+      <div>Home Page</div>
+    </a>
+    <a href="#">
+      <div>Catálogo</div>
+    </a>
+    <a href="acercaDe.html">
+      <div>Quienes Somos</div>
+    </a>
+  </nav>
+
+  <header class="header">
+
+  </header>
+
+  <section class="home" id="home">
+
+    <div class="content">
+        <h3><strong>Catalogo</strong></h3>
+    </div>
+
+</section>
+
+  <template id="shadowTemplate" data-name="goyes-card" data-type="shadowDOM">
+    <style>
+      :host {
+        position: relative;
+        display: inline-block;
+        width: 230px;
+        height: 383px;
+        box-sizing: border-box;
+        margin: 100px 20px;
+
+        box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .5);
+
+        overflow: hidden;
+      }
+
+      ::slotted([slot="image"]) {
+        position: absolute;
+        top: -20%;
+        left: -30%;
+        max-width: 160%;
+        height: auto;
+
+        transition: all .25s ease-in-out;
+      }
+
+      :host(:hover) ::slotted([slot="image"]) {
+        transform: scale(.90);
+      }
+
+      .overlay {
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        background: rgba(0, 0, 0, .6);
+        color: #fff;
+
+        transition: bottom .25s ease-in;
+
+        overflow: hidden;
+      }
+
+      :host(:hover) .overlay {
+        bottom: 0;
+      }
+
+      .overlay__title {
+        padding: 30px 0;
+
+        text-align: center;
+        font-size: 30px;
+      }
+
+      .overlay__description {
+        padding: 0 10px 30px 10px;
+        min-height: 9em;
+
+        font-size: 18px;
+        text-align: center;
+        line-height: 1.4em;
+      }
+
+      .overlay__button {
+        color: white;
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: bold;
+        bottom: 0;
+        transition: background .25s ease-out;
+
+        cursor: pointer;
+      }
+
+      ::slotted([slot="button"]),
+      ::slotted([slot="button"]:link),
+      ::slotted([slot="button"]:visited),
+      ::slotted([slot="button"]:hover) {
+        color: #fff;
+        text-decoration: none;
+      }
+    </style>
+
+    <div class="img">
+      <slot name="image"></slot>
+    </div>
+
+    <div class="overlay">
+      <div class="overlay__title">
+        <slot name="header"></slot>
+      </div>
+
+      <div class="overlay__description">
+        <slot name="description"></slot>
+      </div>
+      <div class="overlay__button">
+        <slot></slot>
+      </div>
+    </div>
+
+  </template>
+  <script>
+    var allShadows = [...document.querySelectorAll('template[data-type="shadowDOM"]')];
+    allShadows.forEach((item) => {
+      customElements.define(item.dataset.name, class extends HTMLElement {
+        connectedCallback() {
+          this.attachShadow({ mode: 'open' });
+          this.shadowRoot.append(item.content.cloneNode(true));
+        }
+      });
+    });
+  </script>
+  <div class="contenedor-card">
+    <goyes-card>
+      <img slot="image" src="images/girasol.jpg" width="400" height="600" alt="" />
+      <span slot="header">Girasol</span>
+      <span slot="description">Helianthus annuus, también llamado comúnmente girasol, maravilla, mirasol, maíz de teja,
+        acahual.</span>
+      <goyes-modal>
+        <h1 slot="header">Helianthus annuus</h1>
+        <p>Los girasoles son plantas anuales (como lo indica su nombre específico latín: annuus) que pueden medir tres
+          metros de alto. Los tallos son generalmente erectos e hispidos. La mayoría de las hojas son caulinares,
+          alternas, pecioladas, con base cordiforme y bordes aserrados.
+        </p>
+      </goyes-modal>
+    </goyes-card>
+
+    <goyes-card>
+      <img slot="image"
+        src="images/loto.jpg"
+        width="400" height="600" alt="" />
+      <span slot="header">Flor de loto</span>
+      <span slot="description">Conocido como loto sagrado o loto indio, y a veces el de rosa del Nilo. Es famosa la longevidad de sus semillas, que pueden germinar después de diez siglos.</span>
+      <goyes-modal>
+        <h1 slot="header">Nelumbo nucifera</h1>
+        <p>Nelumbo nucifera es una de las dos especies pertenecientes al género Nelumbo. Tiene un uso muy extendido en jardinería para cubrimiento de superficies de agua, a pesar de sus flores efímeras. Se utilizan numerosos cultivares con diferentes pautas florales. Los rizomas y semillas se comen tostadas o cocidas. También se usa en medicina popular.
+        </p>
+      </goyes-modal>
+    </goyes-card>
+
+    <goyes-card>
+      <img slot="image"
+        src="images/oregano.jpg"
+        width="400" height="600" alt="" />
+      <span slot="header">Oregano</span>
+      <span slot="description">Origanum vulgare, comúnmente conocida como orégano, es una especie de la familia Lamiaceae (antes llamada Labiaceae).</span>
+        <goyes-modal>
+          <h1 slot="header">Origanum vulgare</h1>
+          <p>Sus propiedades han sido ampliamente estudiadas, siendo las más importantes su actividad antioxidante, antimicrobiana y, en estudios bastante primarios, antitumoral, antiséptica, y también se le considera tónica y digestiva.
+          </p>
+        </goyes-modal>
+    </goyes-card>
+
+    <goyes-card>
+      <img slot="image"
+        src="images/aloe.jpg"
+        width="400" height="600" alt="" />
+      <span slot="header">Aloe</span>
+      <span slot="description">Aloe, de nombre común áloe, sábila o acíbar, entre otros, es un género de plantas suculentas.</span>
+        <goyes-modal>
+          <h1 slot="header">Acíbar</h1>
+          <p>Estas plantas se cultivan frecuentemente como ornamentales tanto en jardines como en macetas, por su atractivo y dureza.
+            Algunas especies, Aloe maculata, Aloe arborescens y en especial Aloe vera, se utilizan en medicina alternativa por contener el principio activo aloina y como botiquín doméstico de primeros auxilios.
+          </p>
+        </goyes-modal>
+    </goyes-card>
+    
+  </div>
+  <a href="index.html">
+    <div class="boton"><span>Home Page</span></div>
+</a>
+<footer>
+    <span>Grupo 5 - Desarrollo Web</span>
+</footer>
+</body>
+</html>
