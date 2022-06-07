@@ -19,14 +19,6 @@ nav {
     font-size: 25px;
     font-weight: bolder;
 }
-.btn1{
-    color: #283747;
-    background-color: #EAF2F8 ;
-}
-.btn2{
-    color: #283747;
-    background-color: #EAF2F8 ;
-}
 
 @keyframes back {
     100% {
@@ -274,5 +266,3 @@ section {
     cursor: pointer;
     text-decoration: none;
 }
-
-
