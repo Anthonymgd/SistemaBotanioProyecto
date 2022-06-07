@@ -1,18 +1,22 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Sistema Botanico</title>
-    <link rel="stylesheet" href="css/Home.css">
-    <script src="js/template.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acerca De</title>
+    <link rel="icon" href="images/icono.ico" />
+    <link rel="stylesheet" href="css/acerca_de.css" />
 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;500&display=swap');
+    </style>
+    <script src="js/custom.js"></script>
 </head>
 
 <body>
     <nav>
-        <a href="home.html">
+        <a href="index.html">
             <div>Home Page</div>
         </a>
         <a href="catalogo.html">
@@ -22,217 +26,127 @@
             <div>Quienes Somos</div>
         </a>
     </nav>
-    <header class="header">
 
-    </header>
+    <main class="principal">
+        <center>
+            <texto-animado></texto-animado>
+            <br>
 
-    <section class="home" id="home">
-
-        <div class="content">
-            <h3>Cultivadas con abono natural</h3>
-            <p>Conoce la mejor experiencia de cultivos del Ecuador, visítanos!.</p>
-        </div>
-
-    </section>
-
-    <section class="about" id="about">
-
-        <h1 class="heading"> <span>Acerca De</span> Nosotros </h1>
-
-        <div class="row">
-
-            <div class="image">
-                <img src="imagenes/Flor-loto-about.png" alt="">
-            </div>
-
-            <div class="content">
-                <h3>¿Por que Preferirnos?</h3>
-                <p>Somos la empresa #1 a nivel Nacional, contamos con los mejores ingenieros agrónomos, todo
-                    nuestro equipo está comprometido para brindar el mejor servicio al usuario.
-                </p>
-                <p>Todos nuestros productos son sembrados con el mejor cuidado y calidad, los abonos son 100% naturales
-                    sin quimicos de por medio.</p>
-            </div>
-
-        </div>
-
-    </section>
-    <template id='Estrella'>
-        <section class="products" id="products">
-
-            <h1 class="heading"> Productos <span>Estrellas</span> </h1>
-
-            <div class="box-container">
-
-                <div class="box">
-                    <div class="image">
-                        <img src="imagenes/Producto1.jpg" style="
-                    width: 200px;">
-                    </div>
-                    <div class="content">
-                        <h3>Oregano </h3>
-
-                        <div class="price">$5.99 <span>$8.99</span></div>
-                        <a href="#" class="btn">Visitar tienda</a>
-                    </div>
+            <div class="contenedor">
+                <div style="padding-right: 30px;">
+                    <h2 style="font-family: 'Work Sans', sans-serif; font-size: 40px;">Información</h2>
                 </div>
 
-                <div class="box">
-                    <div class="icons">
-                        <a href="#" class="fas fa-shopping-cart"></a>
-                        <a href="#" class="fas fa-heart"></a>
-                        <a href="#" class="fas fa-eye"></a>
-                    </div>
-                    <div class="image">
-                        <img src="imagenes/Producto2.jpg" style="
-                    width: 200px;">
-                    </div>
-                    <div class="content">
-                        <h3>Girasoles</h3>
-                        <div class="price">$3.99 <span>$5.99</span></div>
-                        <a href="#" class="btn">Visitar tienda</a>
-                    </div>
-                </div>
-
-                <div class="box">
-                    <div class="icons">
-                        <a href="#" class="fas fa-shopping-cart"></a>
-                        <a href="#" class="fas fa-heart"></a>
-                        <a href="#" class="fas fa-eye"></a>
-                    </div>
-                    <div class="image">
-                        <img src="imagenes/Producto3.jpg" style="
-                    width: 200px;">
-                    </div>
-                    <div class="content">
-                        <h3>Sabila</h3>
-                        <div class="price">$8.99 <span>$10.99</span></div>
-                        <a href="#" class="btn">Visitar tienda</a>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-        <style>
-            /*Estilo para productos estrellas*/
-            .products .box-container {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-                gap: 1.5rem;
-            }
-
-            .products .box-container .box {
-                text-align: center;
-                border: var(--border);
-                padding: 2rem;
-            }
-
-            .products .box-container .box .content h3 {
-                color: rgb(0, 0, 0);
-                font-size: 2.5rem;
-            }
-
-            /*Color para el precio*/
-            .products .box-container .box .content .price {
-                color: rgb(0, 0, 0);
-                font-size: 2.5rem;
-            }
-
-            /*Rayamos el precio */
-            .products .box-container .box .content .price span {
-                text-decoration: line-through;
-                font-weight: lighter;
-                font-size: 1.5rem;
-            }
-
-            .heading {
-                text-align: center;
-                color: rgb(0, 0, 0);
-                text-transform: uppercase;
-                padding-bottom: 3.5rem;
-                font-size: 4rem;
-            }
-
-            .heading span {
-                color: var(--main-color);
-                text-transform: uppercase;
-            }
-
-            .btn {
-                margin-top: 1rem;
-                display: inline-block;
-                padding: .9rem 3rem;
-                font-size: 1.7rem;
-                color: rgb(0, 0, 0);
-                background: var(--main-color);
-                cursor: pointer;
-                text-decoration: none;
-            }
-
-            .btn:hover {
-                letter-spacing: .2rem;
-            }
-        </style>
-    </template>
-    <producto-estrella>
-    </producto-estrella>
-
-    <!--Parte de productos estrella-->
-    <section class="review" id="review">
-
-        <h1 class="heading"> Nuestros <span>Clientes</span> </h1>
-
-        <div class="box-container">
-
-            <div class="box">
-                <img src="imagenes/quote-img.png" alt="" class="quote">
-                <p>Excelente servicio, llevo haciendo más de 10 pedidos y todos ellos me llegan con la misma calidad,
-                    mis plantas crecen de una manera increíble y estoy muy agradecido con ustedes, recomendados al 100.
+                <p style="padding-right: 15px;">
+                    Somos una empresa que trata de brindar una mejor experiencia de compra de plantas a nuestros clientes. Esto lo logramos con la ayuda de un equipo de trabajo que se encarga de la entrega de los productos a nuestros clientes.
                 </p>
-                <img src="imagenes/pic-1.png" class="user" alt="">
-                <h3>john deo</h3>
+                <img src="images/Botanico.png" alt="Botanico" class="logo">
+
             </div>
+            <br>
 
-            <div class="box">
-                <img src="imagenes/quote-img.png" alt="" class="quote">
-                <p>Los envíos son muy seguros, llegan impecables tal y como muestran en sus fotos, los productos son de
-                    alta calidad además de enviar abono orgánico para que siga creciendo de manera constante </p>
-                <img src="imagenes/pic-2.png" class="user" alt="">
-                <h3>Sofia Mendez</h3>
-            </div>
-
-            <div class="box">
-                <img src="imagenes/quote-img.png" alt="" class="quote">
-                <p>Cada producto que he consumido es exquisito, mantiene la frescura y el aroma como si estuvieran
-                    recién cosechados, además de brindar productos orgánicos a un excelente precio sin duda no los
-                    cambiaria.</p>
-                <img src="imagenes/pic-3.png" class="user" alt="">
-                <h3>Gustavo Otto</h3>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!--FIN-->
-    <center>
-        <div>
-            <template id="plantillaestudiante">
-                <br>
-                <p>
-                <h1 class="heading">Nombre: <span></span></h1>
+            <br>
+            <div class="contenedorm1">
+                <div style="padding-right: 30px;">
+                    <h2 style="font-family: 'Work Sans', sans-serif; font-size: 40px; color: white;">Misión</h2>
+                </div>
+                <img src="images/imagen.png" alt="Botanico" class="logo">
+                <p style="padding-right: 15px;">
+                    Ofecer productos de calidad obteniendo una mejor relación precio-beneficio. Para ello, trabajamos con los mejores proveedores de plantas y plantas de calidad. Todo lo hacemos con la finalidad de que nuestros clientes puedan obtener una mejor experiencia
+                    de compra.
                 </p>
-                <hr>
-            </template>
-        </div>
-        <input id="botoncargar" type="button" value="Nuestros Integrantes" onclick="cargarRegistro()"></h1>
-    </center>
-    <section class="footer">
 
-        <div class="credit">Realizado Por<span> Grupo 5</span> | Todos los derechos reservados </div>
 
-    </section>
+            </div>
+            <br>
+            <hr-separador></hr-separador>
+            <br>
+            <div class="contenedorm">
+                <div style="padding-right: 30px;">
+                    <h2 style="font-family: 'Work Sans', sans-serif; font-size: 40px;">Visión</h2>
+                </div>
+                <img src="images/plantas2.png" alt="Botanico" class="logo">
+                <p style="padding-right: 15px;">
+                    Nuestro objetivo es ser una empresa líder en el mercado de plantas y plantas de calidad. Fortalecer la relación entre los clientes y los proveedores de plantas para que así fomentar el trabajo en equipo y generar una buena comunión a largo plazo.
+                </p>
+            </div>
 
+            <center>
+                <h1 style="font-size: 60px;">Integrantes</h1>
+            </center>
+            <div class="integrantes_table">
+
+                <table style="padding: 10px;">
+                    <thead>
+                        <tr>
+                            <td style="padding: 15px;">
+                                <div class="integrante">
+                                    <center>
+                                        <img src="images/joan.jpeg" style="width: 120px; border-radius: 50%;">
+                                        <h2>Joan Cevallos</h2>
+                                    </center>
+
+
+                                </div>
+                            </td>
+                            <td style="padding: 15px;">
+                                <div class="integrante">
+                                    <center>
+                                        <img src="images/anthony.jpeg" style="width: 120px; border-radius: 50%;">
+                                        <h2>Anthony Goyes</h2>
+                                    </center>
+
+                                </div>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 15px;">
+                                <div class="integrante">
+                                    <center>
+                                        <img src="images/Carlos.jpeg" style="width: 120px; border-radius: 50%;">
+                                        <h2>Carlos Lucio</h2>
+                                    </center>
+
+                                </div>
+                            </td>
+                            <td style="padding: 15px;">
+                                <div class="integrante">
+                                    <center>
+                                        <img src="images/Luis.jpeg" style="width: 120px; border-radius: 50%;">
+                                        <h2>Luis Olalla</h2>
+                                    </center>
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="integrante">
+                                    <center>
+                                        <img src="images/selena.jpg" style="width: 120px; border-radius: 50%;">
+                                        <h2>Selena Rivas</h2>
+                                    </center>
+
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br>
+
+        </center>
+
+    </main>
+
+    <a href="index.html">
+        <div class="boton"><span>Home Page</span></div>
+    </a>
+    <footer>
+        <span>Grupo 5 - Desarrollo Web</span>
+    </footer>
 </body>
 
 </html>
