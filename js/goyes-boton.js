@@ -15,7 +15,6 @@ class BotonEstandar extends HTMLElement {
         //determine what type of html node this is based on the attributes
         let htmlNode = 'button';
         let href = false
-        this.setAttribute('content','+');
         if (this.hasAttribute('href')) {
             htmlNode = 'a'
             href = this.getAttribute('href')
