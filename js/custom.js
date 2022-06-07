@@ -5,27 +5,111 @@ class Texto extends HTMLElement {
 
     connectedCallback() {
         this.innerHTML = `
+        
         <style>
-            h1{
-                font-weight: 300px;
-                text-align: center;
-                font-size: 90px;
-                line-height: 160px;
-                margin-left: -10px;
-                color: rgb(0, 0, 0);
-                font-family: 'Work Sans', sans-serif;
-                animation: back 20s linear infinite;
+        
+            .Iam {
+                padding: 1em 0 5em 12em;
+                font: normal 40px/50px Montserrat, sans-serif;
+                color: #999;
+                margin: 0 auto; 
             }
-            @keyframes back {
-                100% {
-                    background-position: 2000px 0;
-                }
+            .Iam p {
+                height: 50px;
+                float: left;
+                margin-right: 0.3em;
+            }
+            .Iam b {
+                float: left;
+                overflow: hidden;
+                position: relative;
+                height: 50px;
+                top: 40px;
+            }
+            .Iam .innerIam {
+                display: inline-block;
+                color: #32a361;
+                position: relative;
+                white-space: nowrap;
+                top: 0;
+                left: 5px;
+            
+            
+            /*animation*/
+            -webkit-animation:move 5s;
+                -moz-animation:move 5s;
+                -ms-animation:move 5s;
+                -o-animation:move 5s;
+                    animation:move 5s;
+            /*animation-iteration-count*/
+            -webkit-animation-iteration-count:infinite;
+                -moz-animation-iteration-count:infinite;
+                -ms-animation-iteration-count:infinite;
+                -o-animation-iteration-count:infinite;
+                    animation-iteration-count:infinite;
+            /*animation-delay*/
+            -webkit-animation-delay:1s;
+                -moz-animation-delay:1s;
+                -ms-animation-delay:1s;
+                -o-animation-delay:1s;
+                    animation-delay:1s;
+            }
+            @keyframes move{
+            0%  { top: 0px; }
+            20% { top: -50px; }
+            40% { top: -100px; }
+            60% { top: -150px; }
+            80% { top: -200px; }
+            }
+            
+            @-webkit-keyframes move {
+                0%  { top: 0px; }
+                20% { top: -50px; }
+                40% { top: -100px; }
+                60% { top: -150px; }
+                80% { top: -200px; }
+            }
+            @-moz-keyframes move {
+                0%  { top: 0px; }
+                20% { top: -50px; }
+                40% { top: -100px; }
+                60% { top: -150px; }
+                80% { top: -200px; }
+            }
+            @-o-keyframes move {
+                0%  { top: 0px; }
+                20% { top: -50px; }
+                40% { top: -100px; }
+                60% { top: -150px; }
+                80% { top: -200px; }
+            }
+            @keyframes move {
+                0%  { top: 0px; }
+                20% { top: -50px; }
+                40% { top: -100px; }
+                60% { top: -150px; }
+                80% { top: -200px; }
             }
         </style>
 
-      
-        <h1>¿Quienes Somos?</h1>
-       
+        <center>
+            <div class="Iam">
+
+                <p>Nostros Somos</p>
+                <b>
+                <div class="innerIam">
+                    creativos<br /> 
+                    naturaleza<br />
+                    comunión<br />
+                    compañerismo<br />
+                    solidaridad
+                    </div>
+                </b>
+
+            </div>
+   
+        </center>
+        
         
         `
     }
