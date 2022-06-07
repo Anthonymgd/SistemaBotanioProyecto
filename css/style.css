@@ -34,9 +34,9 @@ body {
   background-size: cover;
 }
 
-a {
+a, a:hover, a:active {
   text-decoration: none;
-  color: #222;
+  color: black;
 }
 
 nav {
