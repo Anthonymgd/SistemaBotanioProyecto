@@ -25,7 +25,6 @@ hr {
 
 .contenedor p {
     font-size: 20px;
-    font-family: 'Work Sans', sans-serif;
     color: black;
     text-align: justify;
 }
@@ -41,7 +40,6 @@ hr {
 
 .contenedorm p {
     font-size: 20px;
-    font-family: 'Work Sans', sans-serif;
     color: black;
     text-align: justify;
 }
@@ -57,7 +55,6 @@ hr {
 
 .contenedorm1 p {
     font-size: 20px;
-    font-family: 'Work Sans', sans-serif;
     color: rgb(255, 255, 255);
     text-align: justify;
 }
@@ -127,7 +124,6 @@ footer {
 
 footer span {
     font-size: 30px;
-    font-family: 'Work Sans', sans-serif;
     color: white;
 }
 
@@ -174,7 +170,6 @@ footer span {
 .integrante {
     width: 100%;
     height: auto;
-    font-family: 'Work Sans', sans-serif;
     font-size: 35px;
     color: #f2f2f2;
 }
