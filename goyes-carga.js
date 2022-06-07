@@ -88,7 +88,7 @@ class ProgressBar extends HTMLElement {
 
         if(complete <= 100) {
             progress.setAttribute('complete', complete);
-            window.location.href = "./catalogo.html";
+            window.location.href = "./home.html";
         } else {
             clearInterval(progressInterval);
         }

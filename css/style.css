@@ -5,6 +5,11 @@
   font-family: sans-serif;
 }
 
+a , a:hover{
+  color: black;
+  text-decoration: none;
+}
+
 .contenedor {
   width: 80%;
   height: 50%;
@@ -18,7 +23,6 @@
 
 .contenedor p {
   font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
   color: black;
   text-align: justify;
   text-transform: uppercase;
